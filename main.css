@@ -1,0 +1,89 @@
+body {
+    padding: 20px;
+    user-select: none;
+}
+
+div.cell {
+    background: slategray;
+    border-radius: 5px;
+    font: calc(var(--size) * .75) monospace;
+    height: var(--size);
+    line-height: 130%;
+    overflow: scroll;
+    text-align: center;
+    transition: background-color 250ms, color 250ms;
+    width: var(--size);
+}
+
+div.cell:hover {
+    background: darkslategray;
+    color: #ccc;
+}
+
+div.row {
+    display: flex;
+    gap: calc(var(--size) / 25);
+}
+
+html {
+    display: grid;
+}
+
+output {
+    display: grid;
+    gap: calc(var(--size) / 25);
+}
+
+section {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto 1fr;
+    margin-bottom: 20px;
+    min-width: 1024px;
+}
+
+section>* {
+    font: 40px monospace;
+    padding: 5px 15px;
+    transition: scale 250ms;
+}
+
+section>*:focus {
+    outline: none;
+}
+
+section button {
+    background: darkgoldenrod;
+    border: none;
+    color: white;
+}
+
+section button:hover {
+    scale: 1.1;
+}
+
+section button:active {
+    scale: 1;
+}
+
+section input {
+    border-color: slategray;
+    border-radius: 5px;
+    transition: border 250ms;
+}
+
+section input:hover {
+    border-color: black;
+}
+
+section select {
+    appearance: none;
+    background: darkgoldenrod;
+    border: none;
+    color: white;
+    text-align: center;
+}
+
+section select:hover {
+    scale: 1.1;
+}
