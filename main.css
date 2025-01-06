@@ -4,13 +4,13 @@ body {
 }
 
 div.cell {
+    align-items: center;
     background: slategray;
     border-radius: 5px;
+    display: flex;
     font: calc(var(--size) * .75) monospace;
     height: var(--size);
-    line-height: 130%;
-    overflow: scroll;
-    text-align: center;
+    justify-content: center;
     transition: background-color 250ms, color 250ms;
     width: var(--size);
 }
@@ -45,7 +45,6 @@ section {
 section>* {
     font: 40px monospace;
     padding: 5px 15px;
-    transition: scale 250ms;
 }
 
 section>*:focus {
@@ -56,6 +55,7 @@ section button {
     background: darkgoldenrod;
     border: none;
     color: white;
+    transition: scale 250ms;
 }
 
 section button:hover {
@@ -82,8 +82,4 @@ section select {
     border: none;
     color: white;
     text-align: center;
-}
-
-section select:hover {
-    scale: 1.1;
 }

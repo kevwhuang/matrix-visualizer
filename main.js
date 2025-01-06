@@ -69,7 +69,7 @@ function render() {
         for (let c = 0; c < n; c++) {
             const cell = document.createElement('div');
             cell.classList.add('cell');
-            cell.innerText = matrix[r][c];
+            cell.innerHTML = `<p>${matrix[r][c]}</p>`;
             row.append(cell);
         }
     }
