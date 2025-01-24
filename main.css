@@ -21,6 +21,10 @@ div.cell:hover {
     color: #ccc;
 }
 
+div.cell::-webkit-scrollbar {
+    display: none;
+}
+
 div.row {
     display: flex;
     gap: calc(var(--size) / 25);

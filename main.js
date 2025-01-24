@@ -1,10 +1,10 @@
 const errors = {
-    empty: 'Please enter a serialized matrix.',
-    invalid: 'The serialization is invalid.',
     array: 'Each row must be an array.',
-    rows: 'Row length must be between 1 and 1000.',
     columns: 'Column length must be between 1 and 1000.',
     consistent: 'Each row must have a consistent length.',
+    empty: 'Please enter a serialized matrix.',
+    invalid: 'The serialization is invalid.',
+    rows: 'Row length must be between 1 and 1000.',
     type: 'Each cell must have the same type.',
 };
 
@@ -13,8 +13,8 @@ const select = document.querySelector('select');
 const input = document.querySelector('input');
 const output = document.querySelector('output');
 
-addEventListener('load', () => input.value = localStorage.getItem('data'));
-addEventListener('load', () => select.selectedIndex = localStorage.getItem('size'));
+addEventListener('load', () => (input.value = localStorage.getItem('data')));
+addEventListener('load', () => (select.selectedIndex = localStorage.getItem('size')));
 addEventListener('keydown', e => e.key === 'Enter' && button.click());
 addEventListener('keydown', e => e.key === 'ArrowUp' && (select.selectedIndex = (select.selectedIndex + 5) % 6));
 addEventListener('keydown', e => e.key === 'ArrowDown' && (select.selectedIndex = (select.selectedIndex + 1) % 6));
